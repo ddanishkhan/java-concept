@@ -1,5 +1,6 @@
-package com.scaler.bookmyshowfeb23.models;
+package com.scaler.bookmyshow.models;
 
+import com.scaler.bookmyshow.models.enums.ShowSeatState;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,6 @@ public class ShowSeat extends BaseModel {
     @ManyToOne
     private Seat seat;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private ShowSeatState state;
 }

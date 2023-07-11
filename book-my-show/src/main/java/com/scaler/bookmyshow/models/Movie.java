@@ -1,5 +1,7 @@
-package com.scaler.bookmyshowfeb23.models;
+package com.scaler.bookmyshow.models;
 
+import com.scaler.bookmyshow.models.enums.Feature;
+import com.scaler.bookmyshow.models.enums.Genre;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,10 +17,12 @@ public class Movie extends BaseModel {
     @ManyToMany
     private List<Actor> actors;
 
-    @ManyToMany
+    @Enumerated(EnumType.STRING)
+    @ElementCollection
     private List<Feature> movieFeatures;
 
-    @ManyToMany
+    @Enumerated(EnumType.STRING)
+    @ElementCollection
     private List<Genre> genre;
 
 

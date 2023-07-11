@@ -1,4 +1,4 @@
-package com.scaler.bookmyshowfeb23.models;
+package com.scaler.bookmyshow.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class ShowSeatType extends BaseModel {
     @ManyToOne
     private Show show;
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private SeatType seatType;
     private double price;
 }

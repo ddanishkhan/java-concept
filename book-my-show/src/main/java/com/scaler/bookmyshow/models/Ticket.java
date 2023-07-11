@@ -1,5 +1,6 @@
-package com.scaler.bookmyshowfeb23.models;
+package com.scaler.bookmyshow.models;
 
+import com.scaler.bookmyshow.models.enums.TicketStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +22,7 @@ public class Ticket extends BaseModel {
     private List<ShowSeat> showSeats;
     private double totalAmount;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private TicketStatus ticketStatus;
 
     private Date timeOfBooking;

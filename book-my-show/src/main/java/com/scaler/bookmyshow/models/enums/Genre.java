@@ -1,4 +1,4 @@
-package com.scaler.bookmyshowfeb23.models;
+package com.scaler.bookmyshow.models.enums;
 
 public enum Genre {
     COMEDY,

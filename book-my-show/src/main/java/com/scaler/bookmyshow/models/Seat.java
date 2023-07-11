@@ -7,7 +7,6 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -18,8 +17,8 @@ public class Seat extends BaseModel {   /* This is a physical seat */
     @Enumerated(EnumType.STRING)
     private SeatType seatType;
 
-    private int row;
-    private int column;
+    private int rowIndex;
+    private int columnIndex;
 
     @Enumerated(EnumType.STRING)
     private SeatStatus seatStatus;
